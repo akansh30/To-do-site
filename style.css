@@ -1,25 +1,30 @@
+
 body {
     font-family: 'Arial', sans-serif;
-    background: #f7f7f7;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
     text-align: center;
 }
 
 h1 {
     margin-bottom: 20px;
     color: #333;
+    font-family: 'Pacifico', cursive;
 }
 
 .input-container {
@@ -30,24 +35,33 @@ h1 {
 
 #new-task {
     flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#new-task:focus {
+    border-color: #ff7e5f;
+    outline: none;
 }
 
 #add-task-btn {
-    padding: 10px;
+    padding: 15px;
     margin-left: 10px;
     border: none;
-    background: #5cb85c;
+    background: #ff7e5f;
     color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 16px;
 }
 
 #add-task-btn:hover {
-    background: #4cae4c;
+    background: #eb5e28;
+    transform: scale(1.05);
 }
 
 ul {
@@ -56,14 +70,20 @@ ul {
 }
 
 li {
-    padding: 10px;
-    background: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 15px;
+    background: #fdfdfd;
+    border: 2px solid #ddd;
+    border-radius: 10px;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background 0.3s, transform 0.3s;
+}
+
+li:hover {
+    background: #ff7e5f;
+    transform: scale(1.02);
 }
 
 li.completed {
@@ -72,15 +92,17 @@ li.completed {
 }
 
 li button {
-    background: #d9534f;
+    background: #ff5252;
     color: white;
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 14px;
 }
 
 li button:hover {
-    background: #c9302c;
+    background: #e53935;
+    transform: scale(1.05);
 }
